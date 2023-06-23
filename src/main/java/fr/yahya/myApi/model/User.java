@@ -11,6 +11,9 @@ public class User {
         this.age = age;
     }
 
+    public User() {
+    }
+
     public int getId() {
         return this.id;
     }
@@ -29,5 +32,8 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void add(User user) {
     }
 }

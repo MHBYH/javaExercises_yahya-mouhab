@@ -1,6 +1,8 @@
 package fr.yahya.myApi.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,5 +21,14 @@ public class UserController {
     public User getUser(@RequestParam int id) {
         User user = userService.getUser(id);
         return user;
+    }
+
+
+    @PostMapping("/user")
+    public User createUser(@RequestBody UserRequest body) {
+        String name = body.getName();
+        int age = body.getAge();
+        
+        return userService.createUser(name, age);
     }
 }

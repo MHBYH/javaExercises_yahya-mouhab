@@ -16,6 +16,7 @@ public class UserService {
         this.users.add(new User(0, "Georges", 41));
         this.users.add(new User(1, "Lina", 8));
         this.users.add(new User(2, "Gontran", 27));
+
     }
 
     public User getUser(int id) {
@@ -26,4 +27,12 @@ public class UserService {
         }
         return null;
     }
+
+        public User createUser(String name, int age) {
+        int id = this.users.size() + 1;
+        User user = new User(id, name, age);
+        this.users.add(user);
+        return user;
+    }
 }
+   
