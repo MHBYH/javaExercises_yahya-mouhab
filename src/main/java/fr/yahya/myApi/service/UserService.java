@@ -34,5 +34,15 @@ public class UserService {
         this.users.add(user);
         return user;
     }
+    public User updateUser(int id, String name, int age) {
+    for (User user : users) {
+        if (user.getId() == id) {
+            user.setName(name);
+            user.setAge(age);
+            return user;
+        }
+    }
+    return null; }
+
 }
    
