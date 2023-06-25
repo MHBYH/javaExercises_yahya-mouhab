@@ -7,33 +7,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import fr.yahya.myApi.model.Animal;
 import fr.yahya.myApi.model.User;
-import fr.yahya.myApi.service.UserService;
+import fr.yahya.myApi.service.AnimalService;
 
 @RestController
-public class UserController {
-    private UserService userService;
-    public UserController(UserService userService) {
-    this.userService = userService;
+public class AnimalController {
+    private AnimalService animalService;
+    public AnimalController(AnimalService animalService) {
+    this.animalService = animalService;
     }
 
-    @GetMapping("/user")
-    public User getUser(@RequestParam int id) { 
-    User user = userService.getUser(id);
-    return user;
+    @GetMapping("/animals")
+    public Animal getUser(@RequestParam int id) { 
+    Animal animal = animalService.getAnimal(id);
+    return animal;
     }
 
 
-    @PostMapping("/user")
+    @PostMapping("/animals")
     public User createUser(@RequestBody UserRequest body) {
     String name = body.getName();
     int age = body.getAge();    
-    return userService.createUser(name, age);
+    return animalService.createAnimal(name, age);
     }
 
-    @PutMapping("/user") 
+    @PutMapping("/animals") 
     public User updateUser(@RequestParam  int id, @RequestBody UserRequest body){
-        return userService.updateUser(id, body.getName(), body.getAge());
+        return animalService.updateAnimal(id, body.getName(), body.getAge());
 
     }
+    
 }
