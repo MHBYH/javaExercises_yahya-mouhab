@@ -1,6 +1,7 @@
-package fr.yahya.myApi.controller;
+/* package fr.yahya.myApi.controller;
 
 public class UserRequest {
+    public final int getWeight = 0;
     private String name;
     private int age;
     public UserRequest(String name, int age) {
@@ -19,5 +20,6 @@ public class UserRequest {
     public void setAge(int age) {
         this.age = age;
     }
-    
+
 }
+ */

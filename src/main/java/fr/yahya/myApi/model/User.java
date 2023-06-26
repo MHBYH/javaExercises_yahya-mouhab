@@ -1,4 +1,4 @@
-package fr.yahya.myApi.model;
+/* package fr.yahya.myApi.model;
 
 public class User {
     private int id;
@@ -37,3 +37,4 @@ public class User {
     public void add(User user) {
     }
 }
+ */

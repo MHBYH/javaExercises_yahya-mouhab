@@ -2,11 +2,10 @@ package fr.yahya.myApi.controller;
 
 public class AnimalRequest {
     private String name;
-    private int age;
-    
-    public AnimalRequest(String name, int age) {
+    private int weight;
+    public AnimalRequest(String name, int weight) {
         this.name = name;
-        this.age = age;
+        this.weight = weight;
     }
     public String getName() {
         return name;
@@ -14,10 +13,11 @@ public class AnimalRequest {
     public void setName(String name) {
         this.name = name;
     }
-    public int getAge() {
-        return age;
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
-    public void setAge(int age) {
-        this.age = age;
+        public int getWeight() {
+        return weight;
     }
 }
